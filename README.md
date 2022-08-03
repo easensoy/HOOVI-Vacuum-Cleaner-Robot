@@ -8,7 +8,7 @@ Breadth first search is a graph traversal algorithm that starts traversing the g
 
 # Depth-First Search
 
-Depth first search (DFS) algorithm or searching technique starts with the root node of the graph G, and then travel to deeper and deeper until we find the goal node or the node which has no children by visiting different node of the tree
+Depth first search (DFS) algorithm or searching technique starts with the root node of the graph G, and then travel to deeper and deeper until we find the goal node or the node which has no children by visiting different node of the tree.
 
 # DFS vs BFS
 ![image](https://user-images.githubusercontent.com/76905667/182620015-ba53b7ad-3e95-4cc6-afd8-8dda643bfe0f.png)
@@ -42,6 +42,10 @@ The more obvious danger of a function calling itself is that this can result in 
 Each time printSolution is called, the location corresponding to the passed-in state (node) is printed to the screen. For all nodes which don’t correspond to the goal location, the location name is printed, followed by an arrow “—->” to indicate the direction of travel, if the current location is not the goal. The last interesting detail worth pointing out here is that the location is not printed until after the recursive function call. What this means is that although the initial location is not reached until the last recursive call is made, it is actually printed first, before the function returns to the prior recursive call (if there was one), which then prints its location, and so on until the goal location is printed last.
 
 To explain the possible actions of HOOVI, a function generateSuccessor is defined that contains a set of operators. This function is a transform function on a state representation that transforms HOOVI's inter-floor and in-floor states into other states. The generateSuccessor which was created function is a way to define the accessibility relationship between states.
+
+The Binary Tree
+
+![tree](https://user-images.githubusercontent.com/76905667/182643316-d79076d7-7872-45b3-a173-85d5d3771d67.png)
 
 
 ![1](https://user-images.githubusercontent.com/76905667/180611167-71336fbe-f399-46f1-ab18-385b64bd11cf.png)
