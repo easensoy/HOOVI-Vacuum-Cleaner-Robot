@@ -46,21 +46,34 @@ To explain the possible actions of HOOVI, a function generateSuccessor is define
 ## Pseudocode
 
 define goal state
+
+
 define initial state
+
 
 push initial state onto queue
 
 while queue is not empty:
+  
   state s = pop state from queue
+  
   add s to visited list
 
+
   if s == goal state:
+    
     display solution
 
+  
   else:
+    
     generate all valid successors with s as parent
+    
+    
     for all successors:
+      
       if successor is not in visited list:
+        
         add successor to queue
         
 ## The Binary Tree
