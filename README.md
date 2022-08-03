@@ -1,5 +1,12 @@
+#WARMING
+
+
+![image](https://user-images.githubusercontent.com/76905667/182620015-ba53b7ad-3e95-4cc6-afd8-8dda643bfe0f.png)
+
+
+
 # HOOVI-Vacuum-Cleaner-Robot
-BFS &amp; DFS
+The floor plan
 
 ![image](https://user-images.githubusercontent.com/76905667/180611060-5617e08b-da6d-43ef-a1d0-ab6ee304090d.png)
 
