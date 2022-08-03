@@ -80,6 +80,7 @@ while queue is not empty:
 
 ![tree](https://user-images.githubusercontent.com/76905667/182643316-d79076d7-7872-45b3-a173-85d5d3771d67.png)
 
+## The Sample Output
 
 ![1](https://user-images.githubusercontent.com/76905667/180611167-71336fbe-f399-46f1-ab18-385b64bd11cf.png)
 ![2](https://user-images.githubusercontent.com/76905667/180611170-72c2e948-b274-4816-8019-00f7b1023a3f.png)
