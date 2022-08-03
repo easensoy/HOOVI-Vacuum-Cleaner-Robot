@@ -43,6 +43,26 @@ Each time printSolution is called, the location corresponding to the passed-in s
 
 To explain the possible actions of HOOVI, a function generateSuccessor is defined that contains a set of operators. This function is a transform function on a state representation that transforms HOOVI's inter-floor and in-floor states into other states. The generateSuccessor which was created function is a way to define the accessibility relationship between states.
 
+## Pseudocode
+
+define goal state
+define initial state
+
+push initial state onto queue
+
+while queue is not empty:
+  state s = pop state from queue
+  add s to visited list
+
+  if s == goal state:
+    display solution
+
+  else:
+    generate all valid successors with s as parent
+    for all successors:
+      if successor is not in visited list:
+        add successor to queue
+        
 ## The Binary Tree
 
 ![tree](https://user-images.githubusercontent.com/76905667/182643316-d79076d7-7872-45b3-a173-85d5d3771d67.png)
