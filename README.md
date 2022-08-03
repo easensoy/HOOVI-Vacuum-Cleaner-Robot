@@ -70,11 +70,11 @@ while queue is not empty:
     generate all valid successors with s as parent
     
     
-    for all successors:
+  for all successors:
       
-      if successor is not in visited list:
+   if successor is not in visited list:
         
-        add successor to queue
+    add successor to queue
         
 ## The Binary Tree
 
