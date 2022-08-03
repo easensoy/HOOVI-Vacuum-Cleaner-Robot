@@ -1,6 +1,16 @@
-#WARMING
+# WARMING
 
+The two graph-traversal algorithms, such as Breadth-First Search and Depth-First Search, are used to find the shortest path between the current location of the robot and the charging station.
 
+# Breadth-First Search
+
+Breadth first search is a graph traversal algorithm that starts traversing the graph from root node or initial node and traverse all the neighboring nodes. Then, it selects the closest node and visit all the unvisited nodes. The algorithm uses the same process for each of the closest node until it finds the goal or it reaches to destination.
+
+# Depth-First Search
+
+Depth first search (DFS) algorithm or searching technique starts with the root node of the graph G, and then travel to deeper and deeper until we find the goal node or the node which has no children by visiting different node of the tree
+
+# DFS vs BFS
 ![image](https://user-images.githubusercontent.com/76905667/182620015-ba53b7ad-3e95-4cc6-afd8-8dda643bfe0f.png)
 
 
@@ -10,19 +20,23 @@ The floor plan
 
 ![image](https://user-images.githubusercontent.com/76905667/180611060-5617e08b-da6d-43ef-a1d0-ab6ee304090d.png)
 
-HOOVI is an automatic vacuum cleaner that works in a 3-storey office building. The lifts are available to travel between these 3 floors. There is a lobby on each floor of the building, and in addition, there are 12 reception and 12 office rooms on each floor. HOOVI draws its power from the battery and can only be charged in the ground floor charging room when the battery runs out. When HOOVI's battery level is critically low, it should go to the charging room to recharge and then resume its duty. This means that HOOVI could be any room on any floor when it must return to the charging room. The algorithm in this project allows the user to find the shortest path from any room in the building to the charging room.
+## User Interface
 
-ASCII codes was used to reference rooms when obtaining location from the user. Thus, while the room A corresponded to 65, the room N corresponded to 78. Further, the lobby and lift, corresponding to ASCII codes 73 and 74, was presented to the user as I and J respectively. In the 3-storey building, the remaining I (refers to 73) and J (refers to 74) were defined as lobby and lift, respectively, since these were no room names.
+The program has a text-based user interface (UI) which appears in a terminal or command window (depending on operating system) when the program is executed. All input and output takes place through that interface. There are multiple points in the program where the user is prompted to choose between either two or three options.
+
+The user is prompted to choose from three options, by entering “0”, “1”, or “2”.User input is read into a C string (char array) using the scanf function. This approach was chosen because when more than a single character is entered with the getchar function, the extraneous characters can be incorrectly picked up by future calls to getchar. For example, if the user enters “12”, then the leading ‘1' character will be taken as the input to the current call to the getchar function, and the ‘2’ will be taken as the input to the next call to getchar, which is not the desired behaviour. When working with the input as a string, “12” need not be incorrectly accepted as a valid input.
+
+When the user enters a string, the string is tested for equality with the three options, one after another, until either the input has been matched to one of the options or has been determined to be invalid. The C standard library strcmp function is used to compare the input strings with the options. This function returns an integer, which is 0 if the two strings are equal, and which is either greater than or less than 0 if the strings are not equal, depending on an alphabetical comparison
+of the first non-matching character between the two strings. If we are only interested in whether or not the two strings are equal, and not in how they might be alphabetically ordered, then we can treat these returns as true/false values. Because strcmp returns 0 (i.e. false) when the strings are equal, and something which is not 0 (i.e. true, as all non-zero integers are treated as true in conditional expressions) when they are unequal, then we can use a logical inversion to make our conditions intuitive, e.g.
+
+HOOVI is an automatic vacuum cleaner that works in a 3-storey office building. The lifts are available to travel between these 3 floors. There is a lobby on each floor of the building, and in addition, there are 12 reception and 12 office rooms on each floor. HOOVI draws its power from the battery and can only be charged in the ground floor charging room when the battery runs out. When HOOVI's battery level is critically low, it should go to the charging room to recharge and then resume its duty. This means that HOOVI could be any room on any floor when it must return to the charging room. The algorithm in this project allows the user to find the shortest path from any room in the building to the charging room.
 
 To explain the possible actions of HOOVI, a function generateSuccessor is defined that contains a set of operators. This function is a transform function on a state representation that transforms HOOVI's inter-floor and in-floor states into other states. The generateSuccessor which was created function is a way to define the accessibility relationship between states.
 
-In this project, since the aim is to reach the charger room, there is an obligation to go down as fast as possible. Therefore, it would be more advantageous to use Depth-First Search (DFS) as it directly searches for the first floor. Breadth-First Search is at a disadvantage against DFS because it is based on horizontal search and FIFO (First in, First out).
-
-It was used two major searching algorithms such as Breadth-First Search and Depth-First Search.
-
-Breadth-First Search(BFS): Breadth-first search is a graph traversal algorithm that begins at the root node and explores all neighboring nodes.
-
-Depth-First Search(DFS): The depth-first search (DFS) algorithm begins with the first node of the graph and proceeds to go deeper and deeper until we find the goal node or node with no children.
 
 ![1](https://user-images.githubusercontent.com/76905667/180611167-71336fbe-f399-46f1-ab18-385b64bd11cf.png)
 ![2](https://user-images.githubusercontent.com/76905667/180611170-72c2e948-b274-4816-8019-00f7b1023a3f.png)
+
+# The flowchart showing the logic of the main function
+
+![image](https://user-images.githubusercontent.com/76905667/182635118-0d538cc8-f5d8-45fc-b744-9750fecedbff.png)
