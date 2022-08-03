@@ -2,15 +2,15 @@
 
 The two graph-traversal algorithms, such as Breadth-First Search and Depth-First Search, are used to find the shortest path between the current location of the robot and the charging station.
 
-# Breadth-First Search
+## Breadth-First Search
 
 Breadth first search is a graph traversal algorithm that starts traversing the graph from root node or initial node and traverse all the neighboring nodes. Then, it selects the closest node and visit all the unvisited nodes. The algorithm uses the same process for each of the closest node until it finds the goal or it reaches to destination.
 
-# Depth-First Search
+## Depth-First Search
 
 Depth first search (DFS) algorithm or searching technique starts with the root node of the graph G, and then travel to deeper and deeper until we find the goal node or the node which has no children by visiting different node of the tree.
 
-# DFS vs BFS
+## DFS vs BFS
 ![image](https://user-images.githubusercontent.com/76905667/182620015-ba53b7ad-3e95-4cc6-afd8-8dda643bfe0f.png)
 
 
