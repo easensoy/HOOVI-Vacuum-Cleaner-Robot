@@ -16,6 +16,9 @@ Depth first search (DFS) algorithm or searching technique starts with the root n
 
 
 # HOOVI-Vacuum-Cleaner-Robot
+
+HOOVI is an automatic vacuum cleaner that works in a 3-storey office building. The lifts are available to travel between these 3 floors. There is a lobby on each floor of the building, and in addition, there are 12 reception and 12 office rooms on each floor. HOOVI draws its power from the battery and can only be charged in the ground floor charging room when the battery runs out. When HOOVI's battery level is critically low, it should go to the charging room to recharge and then resume its duty. This means that HOOVI could be any room on any floor when it must return to the charging room. The algorithm in this project allows the user to find the shortest path from any room in the building to the charging room.
+
 The floor plan
 
 ![image](https://user-images.githubusercontent.com/76905667/180611060-5617e08b-da6d-43ef-a1d0-ab6ee304090d.png)
@@ -30,8 +33,6 @@ When the user enters a string, the string is tested for equality with the three 
 of the first non-matching character between the two strings. If we are only interested in whether or not the two strings are equal, and not in how they might be alphabetically ordered, then we can treat these returns as true/false values. Because strcmp returns 0 (i.e. false) when the strings are equal, and something which is not 0 (i.e. true, as all non-zero integers are treated as true in conditional expressions) when they are unequal, then we can use a logical inversion to make our conditions intuitive, e.g.
 
 ## Program Structure
-
-HOOVI is an automatic vacuum cleaner that works in a 3-storey office building. The lifts are available to travel between these 3 floors. There is a lobby on each floor of the building, and in addition, there are 12 reception and 12 office rooms on each floor. HOOVI draws its power from the battery and can only be charged in the ground floor charging room when the battery runs out. When HOOVI's battery level is critically low, it should go to the charging room to recharge and then resume its duty. This means that HOOVI could be any room on any floor when it must return to the charging room. The algorithm in this project allows the user to find the shortest path from any room in the building to the charging room.
 
 When the search algorithm finds a solution (i.e. a valid path between the given initial and goal locations), the solution is printed to screen using the printSolution function. This function has a simple purpose but is worth commenting on because it achieves that purpose using recursion, i.e. this function calls itself. It is also worth noting that a recursive solution was not the only option here, and the same behaviour could easily be achieved using a while loop. The recursive approach can lead to compact and neat code, but has potentially severe pitfalls.
 
